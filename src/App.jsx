@@ -1,7 +1,7 @@
 import reactLogo from './assets/react.svg'
 import './App.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { increment } from './store/slices/counter';
+import { decrement, increment, incrementBy } from './store/slices/counter';
 
 function App() {
 
@@ -19,13 +19,19 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <p>
+        count is {counter}
+      </p>
       <div className="card">
         <button onClick={() => dispatch(increment())}>
-          count is {counter}
+          Incremet
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button onClick={() => dispatch(decrement())}>
+          Decrement
+        </button>
+        <button onClick={() => dispatch(incrementBy(2))}>
+          Incremet by 2
+        </button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
