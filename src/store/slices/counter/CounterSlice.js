@@ -1,15 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  value: 0,
+export const counterSlice = createSlice({
+  name: "counter",
   initialState: {
     counter: 10,
   },
-};
-
-export const counterSlice = createSlice({
-  name: "counter",
-  initialState,
   reducers: {
     increment: (state) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
