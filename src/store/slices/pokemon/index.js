@@ -1,1 +1,2 @@
-export * from "./PokemonSlice";
+export * from "./pokemonSlice";
+export * from "./thunks";
